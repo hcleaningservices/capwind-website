@@ -1,0 +1,419 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CAPWIND SRL | Wind Energy Technical Services</title>
+<meta name="description" content="CAPWIND SRL - Wind turbine maintenance, inspection and technical services in Belgium and Europe.">
+
+<style>
+:root {
+  --navy:#071a31;
+  --blue:#123453;
+  --green:#a8d53a;
+  --white:#ffffff;
+  --muted:#c2d0dd;
+}
+* {box-sizing:border-box}
+html {scroll-behavior:smooth}
+body {
+  margin:0;
+  background:var(--navy);
+  color:white;
+  font-family:Arial,Helvetica,sans-serif;
+  line-height:1.6;
+}
+a {color:inherit;text-decoration:none}
+header {
+  background:#071a31f5;
+  position:sticky;
+  top:0;
+  z-index:10;
+  border-bottom:1px solid #ffffff25;
+}
+.navbar {
+  max-width:1200px;
+  margin:auto;
+  padding:16px 22px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  flex-wrap:wrap;
+}
+.brand {font-size:23px;font-weight:bold;letter-spacing:1px}
+.brand span {color:var(--green)}
+nav {display:flex;gap:20px;flex-wrap:wrap}
+nav a:hover {color:var(--green)}
+select {
+  background:#173a57;
+  color:white;
+  padding:10px;
+  border:1px solid #ffffff55;
+  border-radius:6px;
+}
+.hero {
+  min-height:600px;
+  display:flex;
+  align-items:center;
+  background:
+    linear-gradient(90deg,#071a31f5,#071a3199),
+    url("IMG-20261109-WA0019.jpg") center/cover;
+}
+.container {max-width:1200px;margin:auto;padding:0 24px}
+.hero-content {max-width:760px}
+h1 {font-size:clamp(36px,5vw,65px);line-height:1.15}
+h2 {font-size:clamp(28px,3vw,39px)}
+p {color:var(--muted)}
+.hero p {font-size:19px}
+.button {
+  display:inline-block;
+  background:var(--green);
+  color:#071a31;
+  font-weight:bold;
+  padding:15px 25px;
+  border-radius:7px;
+  border:0;
+  cursor:pointer;
+}
+section {padding:85px 0}
+.section-title {margin-bottom:30px}
+.grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+.card {
+  background:var(--blue);
+  border:1px solid #ffffff18;
+  border-radius:12px;
+  padding:26px;
+}
+.card h3 {color:var(--green)}
+.gallery img {
+  width:100%;
+  height:245px;
+  object-fit:cover;
+  border-radius:10px;
+  display:block;
+}
+.about {
+  background:#0c2540;
+}
+.contact {
+  background:#102c49;
+}
+form {max-width:720px;display:grid;gap:14px}
+input,textarea {
+  width:100%;
+  padding:15px;
+  border:1px solid #ffffff33;
+  border-radius:7px;
+  background:#071a31;
+  color:white;
+  font:inherit;
+}
+textarea {min-height:140px}
+footer {
+  text-align:center;
+  padding:35px 20px;
+  background:#041120;
+  color:var(--muted);
+}
+@media(max-width:800px) {
+  .grid {grid-template-columns:1fr}
+  .navbar {justify-content:center}
+  nav {justify-content:center}
+  section {padding:60px 0}
+  .hero {min-height:520px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="navbar">
+    <a class="brand" href="#home">CAP<span>WIND</span> SRL</a>
+
+    <nav>
+      <a href="#services" data-i18n="navServices">Services</a>
+      <a href="#about" data-i18n="navAbout">À propos</a>
+      <a href="#projects" data-i18n="navProjects">Interventions</a>
+      <a href="#contact" data-i18n="navContact">Contact</a>
+    </nav>
+
+    <select id="language" aria-label="Language">
+      <option value="fr">🇫🇷 Français</option>
+      <option value="en">🇬🇧 English</option>
+      <option value="de">🇩🇪 Deutsch</option>
+      <option value="nl">🇳🇱 Nederlands</option>
+    </select>
+  </div>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-content">
+      <h1 data-i18n="heroTitle">
+        L'expertise technique au service de l'énergie éolienne
+      </h1>
+      <p data-i18n="heroText">
+        Maintenance, inspection et assistance technique pour les installations éoliennes.
+      </p>
+      <a class="button" href="#contact" data-i18n="heroButton">
+        Demander une intervention
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <h2 class="section-title" data-i18n="servicesTitle">Nos services</h2>
+    <div class="grid">
+      <article class="card">
+        <h3 data-i18n="service1Title">Maintenance éolienne</h3>
+        <p data-i18n="service1Text">
+          Assistance à la maintenance préventive et corrective des éoliennes.
+        </p>
+      </article>
+      <article class="card">
+        <h3 data-i18n="service2Title">Inspection technique</h3>
+        <p data-i18n="service2Text">
+          Contrôles visuels et accompagnement des inspections techniques.
+        </p>
+      </article>
+      <article class="card">
+        <h3 data-i18n="service3Title">Support sur site</h3>
+        <p data-i18n="service3Text">
+          Assistance technique pour les opérations et interventions sur site.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="container">
+    <h2 data-i18n="aboutTitle">À propos de CAPWIND</h2>
+    <p data-i18n="aboutText">
+      CAPWIND SRL accompagne les acteurs du secteur éolien
+      dans leurs besoins de maintenance, d'inspection
+      et d'assistance technique.
+    </p>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="container">
+    <h2 data-i18n="projectsTitle">Nos interventions</h2>
+    <p data-i18n="projectsText">
+      Découvrez quelques images de nos activités techniques.
+    </p>
+
+    <div class="grid gallery">
+      <img src="IMG-20261109-WA0019.jpg" alt="Wind turbine technical work" loading="lazy">
+      <img src="IMG-20261109-WA0023.jpg" alt="Wind turbine maintenance" loading="lazy">
+      <img src="IMG-20261109-WA0024.jpg" alt="Wind energy installation" loading="lazy">
+      <img src="IMG-20261109-WA0027.jpg" alt="Technical operations" loading="lazy">
+      <img src="IMG-20261109-WA0013%20(1).jpg" alt="Wind turbine service" loading="lazy">
+      <img src="IMG-20261109-WA0027%20(1).jpg" alt="Wind turbine worksite" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <h2 data-i18n="contactTitle">Demander une intervention</h2>
+    <p data-i18n="contactText">
+      Contactez CAPWIND pour discuter de votre projet.
+    </p>
+
+    <p>
+      <strong>Email:</strong>
+      <a href="mailto:capwindsrl@gmail.com">capwindsrl@gmail.com</a>
+    </p>
+
+    <form id="requestForm">
+      <input id="name" required placeholder="Nom / Société">
+      <input id="email" type="email" required placeholder="Adresse e-mail">
+      <input id="phone" type="tel" placeholder="Téléphone">
+      <textarea id="message" required placeholder="Décrivez votre demande"></textarea>
+      <button class="button" type="submit" data-i18n="sendButton">
+        Envoyer la demande
+      </button>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  © <span id="year"></span> CAPWIND SRL |
+  <a href="https://capwind-srl.be">capwind-srl.be</a> |
+  <a href="mailto:capwindsrl@gmail.com">capwindsrl@gmail.com</a>
+</footer>
+
+<script>
+const translations = {
+fr:{
+ navServices:"Services",navAbout:"À propos",
+ navProjects:"Interventions",navContact:"Contact",
+ heroTitle:"L'expertise technique au service de l'énergie éolienne",
+ heroText:"Maintenance, inspection et assistance technique pour les installations éoliennes.",
+ heroButton:"Demander une intervention",
+ servicesTitle:"Nos services",
+ service1Title:"Maintenance éolienne",
+ service1Text:"Assistance à la maintenance préventive et corrective des éoliennes.",
+ service2Title:"Inspection technique",
+ service2Text:"Contrôles visuels et accompagnement des inspections techniques.",
+ service3Title:"Support sur site",
+ service3Text:"Assistance technique pour les opérations et interventions sur site.",
+ aboutTitle:"À propos de CAPWIND",
+ aboutText:"CAPWIND SRL accompagne les acteurs du secteur éolien dans leurs besoins de maintenance, d'inspection et d'assistance technique.",
+ projectsTitle:"Nos interventions",
+ projectsText:"Découvrez quelques images de nos activités techniques.",
+ contactTitle:"Demander une intervention",
+ contactText:"Contactez CAPWIND pour discuter de votre projet.",
+ sendButton:"Envoyer la demande",
+ name:"Nom / Société",email:"Adresse e-mail",
+ phone:"Téléphone",message:"Décrivez votre demande",
+ subject:"Demande d'intervention CAPWIND"
+},
+en:{
+ navServices:"Services",navAbout:"About us",
+ navProjects:"Our work",navContact:"Contact",
+ heroTitle:"Technical expertise for wind energy",
+ heroText:"Maintenance, inspection and technical support for wind energy installations.",
+ heroButton:"Request a service",
+ servicesTitle:"Our services",
+ service1Title:"Wind turbine maintenance",
+ service1Text:"Support for preventive and corrective wind turbine maintenance.",
+ service2Title:"Technical inspection",
+ service2Text:"Visual checks and support for technical inspections.",
+ service3Title:"On-site support",
+ service3Text:"Technical assistance for on-site operations and interventions.",
+ aboutTitle:"About CAPWIND",
+ aboutText:"CAPWIND SRL supports the wind energy industry with maintenance, inspection and technical assistance services.",
+ projectsTitle:"Our work",
+ projectsText:"Discover images of our technical activities.",
+ contactTitle:"Request a service",
+ contactText:"Contact CAPWIND to discuss your project.",
+ sendButton:"Send request",
+ name:"Name / Company",email:"Email address",
+ phone:"Phone",message:"Describe your request",
+ subject:"CAPWIND service request"
+},
+de:{
+ navServices:"Leistungen",navAbout:"Über uns",
+ navProjects:"Einsätze",navContact:"Kontakt",
+ heroTitle:"Technische Kompetenz für Windenergie",
+ heroText:"Wartung, Inspektion und technische Unterstützung für Windenergieanlagen.",
+ heroButton:"Service anfragen",
+ servicesTitle:"Unsere Leistungen",
+ service1Title:"Wartung von Windkraftanlagen",
+ service1Text:"Unterstützung bei der vorbeugenden und korrektiven Wartung von Windkraftanlagen.",
+ service2Title:"Technische Inspektion",
+ service2Text:"Sichtprüfungen und Unterstützung bei technischen Inspektionen.",
+ service3Title:"Unterstützung vor Ort",
+ service3Text:"Technische Unterstützung bei Arbeiten und Einsätzen vor Ort.",
+ aboutTitle:"Über CAPWIND",
+ aboutText:"CAPWIND SRL unterstützt die Windenergiebranche bei Wartung, Inspektion und technischen Dienstleistungen.",
+ projectsTitle:"Unsere Einsätze",
+ projectsText:"Entdecken Sie Bilder unserer technischen Tätigkeiten.",
+ contactTitle:"Service anfragen",
+ contactText:"Kontaktieren Sie CAPWIND, um Ihr Projekt zu besprechen.",
+ sendButton:"Anfrage senden",
+ name:"Name / Unternehmen",email:"E-Mail-Adresse",
+ phone:"Telefon",message:"Beschreiben Sie Ihre Anfrage",
+ subject:"CAPWIND Serviceanfrage"
+},
+nl:{
+ navServices:"Diensten",navAbout:"Over ons",
+ navProjects:"Onze projecten",navContact:"Contact",
+ heroTitle:"Technische expertise voor windenergie",
+ heroText:"Onderhoud, inspectie en technische ondersteuning voor windenergie-installaties.",
+ heroButton:"Dienst aanvragen",
+ servicesTitle:"Onze diensten",
+ service1Title:"Onderhoud van windturbines",
+ service1Text:"Ondersteuning bij preventief en correctief onderhoud van windturbines.",
+ service2Title:"Technische inspectie",
+ service2Text:"Visuele controles en ondersteuning bij technische inspecties.",
+ service3Title:"Ondersteuning op locatie",
+ service3Text:"Technische ondersteuning bij werkzaamheden en interventies op locatie.",
+ aboutTitle:"Over CAPWIND",
+ aboutText:"CAPWIND SRL ondersteunt de windenergiesector met onderhoud, inspecties en technische dienstverlening.",
+ projectsTitle:"Onze werkzaamheden",
+ projectsText:"Bekijk foto's van onze technische activiteiten.",
+ contactTitle:"Dienst aanvragen",
+ contactText:"Neem contact op met CAPWIND om uw project te bespreken.",
+ sendButton:"Aanvraag verzenden",
+ name:"Naam / Bedrijf",email:"E-mailadres",
+ phone:"Telefoon",message:"Beschrijf uw aanvraag",
+ subject:"CAPWIND dienstaanvraag"
+}
+};
+
+const languageSelector = document.getElementById("language");
+
+function setLanguage(lang) {
+  const t = translations[lang] || translations.fr;
+  document.documentElement.lang = lang;
+
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.dataset.i18n;
+    if (t[key]) el.textContent = t[key];
+  });
+
+  ["name","email","phone","message"].forEach(id => {
+    document.getElementById(id).placeholder = t[id];
+  });
+
+  languageSelector.value = lang;
+  try { localStorage.setItem("capwindLanguage",lang); } catch(e) {}
+}
+
+languageSelector.addEventListener("change", e => {
+  setLanguage(e.target.value);
+});
+
+let savedLanguage = "fr";
+try {
+  savedLanguage = localStorage.getItem("capwindLanguage") || "fr";
+} catch(e) {}
+setLanguage(savedLanguage);
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
+document.getElementById("requestForm").addEventListener("submit", e => {
+  e.preventDefault();
+
+  const lang = languageSelector.value;
+  const t = translations[lang];
+
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const phone = document.getElementById("phone").value;
+  const message = document.getElementById("message").value;
+
+  const body =
+    "Name / Company: " + name + "\n" +
+    "Email: " + email + "\n" +
+    "Phone: " + phone + "\n\n" +
+    "Message:\n" + message;
+
+  const url =
+    "mailto:capwindsrl@gmail.com?subject=" +
+    encodeURIComponent(t.subject) +
+    "&body=" + encodeURIComponent(body);
+
+  window.location.href = url;
+});
+</script>
+
+</body>
+</html>
