@@ -1,284 +1,439 @@
-
+ 
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="CAPWIND SRL — wind energy technical services.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CAPWIND SRL | We Power Your Needs</title>
+<meta name="description" content="CAPWIND SRL — Wind turbine maintenance, repair and technical services in Belgium and Europe.">
+
 <style>
-:root{--navy:#081b2c;--blue:#14344c;--green:#8bd43c}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;font:16px/1.65 Arial,sans-serif;background:var(--navy);color:#fff}
-a{color:inherit;text-decoration:none}
-.container{width:min(1160px,92%);margin:auto}
-header{position:sticky;top:0;z-index:10;background:#081b2cf5;border-bottom:1px solid #ffffff25}
-nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 0;flex-wrap:wrap}
-.logo{width:180px;max-height:75px;object-fit:contain}
-.links{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
-.links a:hover{color:var(--green)}
-select,input,textarea{font:inherit}
-.language{padding:8px;background:#18374f;color:white;border:1px solid #ffffff55;border-radius:6px}
-.btn{display:inline-block;padding:13px 24px;border:0;border-radius:7px;background:var(--green);color:#102333;font-weight:bold;cursor:pointer}
-.btn:hover{background:#a4e76a}
-.hero{min-height:640px;display:flex;align-items:center;background:linear-gradient(90deg,#071725ed,#07172555),url('IMG-20261109-WA0019.jpg') center/cover}
-.hero h1{font-size:clamp(40px,6vw,74px);line-height:1.1;max-width:790px;margin:15px 0}
-.hero p{font-size:19px;max-width:650px;color:#e1e8ef}
-.eyebrow{color:var(--green);font-weight:bold;letter-spacing:2px;text-transform:uppercase}
-section{padding:85px 0}
-h2{font-size:clamp(30px,4vw,44px);line-height:1.2;margin:12px 0 24px}
-p{color:#d4dfe8}
-.light{background:#f4f7fa;color:#11283a}
-.light p{color:#4b5d6b}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.card{background:#15334a;border:1px solid #ffffff18;padding:26px;border-radius:13px}
-.card h3{margin:0 0 12px}
-.card p{margin:0}
-.ceo{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:45px}
-.ceo img{width:100%;max-height:570px;object-fit:cover;border-radius:16px}
-.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.gallery img{width:100%;height:255px;object-fit:cover;border-radius:10px}
-form{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:850px}
-.field{display:flex;flex-direction:column;gap:7px}
-.full{grid-column:1/-1}
-.field input,.field select,.field textarea{padding:14px;border:1px solid #b8c7d3;border-radius:7px;background:white;color:#10283b;width:100%}
-.field textarea{min-height:130px}
-.notice{padding:16px;border-radius:8px;background:#e7f2dc;color:#264a20}
-footer{padding:40px 0;background:#061421;text-align:center}
-footer .logo{margin:auto}
-footer p{margin:5px}
-@media(max-width:800px){.cards,.gallery{grid-template-columns:repeat(2,1fr)}.ceo{grid-template-columns:1fr}}
-@media(max-width:560px){.cards,.gallery,form{grid-template-columns:1fr}.hero{min-height:540px}.links{gap:10px;font-size:13px}section{padding:60px 0}}
+:root {
+  --navy:#081c2d;
+  --blue:#12364d;
+  --green:#91d449;
+  --white:#ffffff;
+}
+* {box-sizing:border-box}
+html {scroll-behavior:smooth}
+body {
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  color:#182c39;
+  background:#f5f7f8;
+}
+header {
+  background:var(--navy);
+  padding:15px 6%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:18px;
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+.logo {width:210px;max-width:100%;height:auto}
+nav {display:flex;gap:17px;flex-wrap:wrap}
+nav a {
+  color:white;
+  text-decoration:none;
+  font-size:14px;
+}
+nav a:hover {color:var(--green)}
+select {
+  padding:9px;
+  border-radius:6px;
+  border:1px solid #ccd6dc;
+}
+.hero {
+  background:linear-gradient(115deg,#081c2df2,#12364ddd),
+  url('project-1.jpg') center/cover;
+  color:white;
+  padding:105px 8%;
+  min-height:570px;
+}
+.hero h1 {
+  font-size:clamp(35px,5vw,65px);
+  max-width:800px;
+  line-height:1.1;
+}
+.hero p {
+  font-size:19px;
+  max-width:650px;
+  line-height:1.8;
+}
+.eyebrow {
+  color:var(--green);
+  font-weight:bold;
+  letter-spacing:3px;
+}
+.btn {
+  display:inline-block;
+  background:var(--green);
+  color:var(--navy);
+  padding:15px 24px;
+  text-decoration:none;
+  font-weight:bold;
+  border-radius:5px;
+  margin-top:20px;
+}
+section {padding:75px 8%}
+h2 {font-size:clamp(29px,4vw,43px)}
+.intro {max-width:850px;line-height:1.9}
+.grid {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:24px;
+  margin-top:35px;
+}
+.card {
+  background:white;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 8px 25px #00000010;
+}
+.card img {
+  width:100%;
+  height:230px;
+  object-fit:cover;
+}
+.card .content {padding:25px}
+.card p {line-height:1.7;color:#52616a}
+.dark {background:var(--navy);color:white}
+.dark p {color:#c5d2da}
+.ceo {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  gap:50px;
+}
+.ceo img {
+  width:100%;
+  border-radius:15px;
+  max-height:580px;
+  object-fit:cover;
+}
+.gallery {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+}
+.gallery img {
+  width:100%;
+  height:250px;
+  object-fit:cover;
+  border-radius:9px;
+}
+.contact {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:35px;
+}
+.contact a {color:#235b82}
+footer {
+  background:#061522;
+  color:white;
+  padding:35px 8%;
+}
+footer img {width:190px;max-width:100%}
+footer p {color:#b7c7d1}
+@media(max-width:750px) {
+  .grid,.gallery,.ceo,.contact {
+    grid-template-columns:1fr;
+  }
+  header {position:relative}
+  .hero {padding:75px 7%;min-height:450px}
+  section {padding:55px 7%}
+}
 </style>
 </head>
+
 <body>
 
 <header>
-<nav class="container">
-<a href="#home"><img class="logo" src="capwind-logo.png" alt="CAPWIND SRL — We Power Your Needs"></a>
-<div class="links">
-<a href="#about" data-t="aboutNav">About</a>
-<a href="#services" data-t="servicesNav">Services</a>
-<a href="#projects" data-t="projectsNav">Projects</a>
-<a href="#ceo" data-t="ceoNav">CEO</a>
-<a href="#request" data-t="requestNav">Request Service</a>
-<select class="language" id="language" aria-label="Language">
-<option value="en">EN</option>
-<option value="fr">FR</option>
-<option value="de">DE</option>
-<option value="nl">NL</option>
-</select>
-</div>
-</nav>
+  <!-- The original logo image, not recreated text -->
+  <a href="#home">
+    <img class="logo"
+      src="capwind-logo-original.png"
+      alt="CAPWIND — WE POWER YOUR NEEDS">
+  </a>
+
+  <nav>
+    <a href="#home" data-i="home">Home</a>
+    <a href="#about" data-i="about">About</a>
+    <a href="#services" data-i="services">Services</a>
+    <a href="#leadership" data-i="leadership">Leadership</a>
+    <a href="#projects" data-i="projects">Projects</a>
+    <a href="#contact" data-i="contact">Contact</a>
+  </nav>
+
+  <select id="language" aria-label="Language">
+    <option value="en">English</option>
+    <option value="fr">Français</option>
+    <option value="de">Deutsch</option>
+    <option value="nl">Nederlands</option>
+  </select>
 </header>
 
 <main>
-<section id="home" class="hero">
-<div class="container">
-<div class="eyebrow">CAPWIND SRL</div>
-<h1 data-t="heroTitle">Powering the Future of Wind Energy</h1>
-<p data-t="heroText">Professional technical services and dependable support for wind energy projects.</p>
-<a href="#request" class="btn" data-t="heroButton">Request a Service</a>
-</div>
+<section class="hero" id="home">
+  <div class="eyebrow">CAPWIND SRL · BELGIUM</div>
+  <h1 data-i="heroTitle">Engineering the future of wind energy.</h1>
+  <p data-i="heroText">
+    Professional wind turbine maintenance, repair
+    and technical support with a focus on safety,
+    precision and reliability.
+  </p>
+  <a class="btn" href="#contact" data-i="cta">
+    Request a consultation
+  </a>
 </section>
 
-<section id="about" class="light">
-<div class="container">
-<div class="eyebrow">WE POWER YOUR NEEDS</div>
-<h2 data-t="aboutTitle">Your Partner in Wind Energy</h2>
-<p data-t="aboutText">CAPWIND SRL supports wind energy projects through technical maintenance, inspection, installation assistance and project support. We focus on professionalism, safety and dependable service.</p>
-</div>
+<section id="about">
+  <div class="eyebrow">CAPWIND SRL</div>
+  <h2 data-i="aboutTitle">About our company</h2>
+  <p class="intro" data-i="aboutText">
+    CAPWIND SRL is a Belgium-based technical services
+    company focused on supporting the wind energy
+    sector. We provide maintenance, repair,
+    troubleshooting and operational technical
+    assistance for wind energy projects.
+    Our approach prioritizes professional service,
+    safety and dependable communication.
+  </p>
 </section>
 
-<section id="services">
-<div class="container">
-<div class="eyebrow">CAPWIND SRL</div>
-<h2 data-t="servicesTitle">Our Technical Services</h2>
-<div class="cards">
-<div class="card"><h3 data-t="s1">Wind Turbine Maintenance</h3><p data-t="d1">Maintenance and technical support for wind energy equipment.</p></div>
-<div class="card"><h3 data-t="s2">Technical Inspections</h3><p data-t="d2">Technical inspections and assessments.</p></div>
-<div class="card"><h3 data-t="s3">Installation & Assembly</h3><p data-t="d3">Assistance with turbine installation and assembly.</p></div>
-<div class="card"><h3 data-t="s4">Project Support</h3><p data-t="d4">Coordination and technical project assistance.</p></div>
-<div class="card"><h3 data-t="s5">Technical Consultation</h3><p data-t="d5">Advice and discussion of technical requirements.</p></div>
-<div class="card"><h3 data-t="s6">Custom Requests</h3><p data-t="d6">Contact us for other wind energy technical needs.</p></div>
-</div>
-</div>
+<section class="dark" id="services">
+  <div class="eyebrow">OUR EXPERTISE</div>
+  <h2 data-i="servicesTitle">Technical services</h2>
+  <div class="grid">
+    <article class="card">
+      <img src="project-1.jpg" alt="Wind turbine project">
+      <div class="content">
+        <h3 data-i="s1">Wind turbine maintenance</h3>
+        <p data-i="d1">
+          Technical inspection, preventive maintenance
+          and ongoing turbine support.
+        </p>
+      </div>
+    </article>
+    <article class="card">
+      <img src="project-2.jpg" alt="Wind energy technical work">
+      <div class="content">
+        <h3 data-i="s2">Repairs and troubleshooting</h3>
+        <p data-i="d2">
+          Identifying technical problems and
+          supporting efficient repair operations.
+        </p>
+      </div>
+    </article>
+    <article class="card">
+      <img src="project-3.jpg" alt="Wind energy equipment">
+      <div class="content">
+        <h3 data-i="s3">Technical support</h3>
+        <p data-i="d3">
+          Practical technical assistance and
+          coordination for wind energy projects.
+        </p>
+      </div>
+    </article>
+  </div>
 </section>
 
-<section id="ceo" class="light">
-<div class="container ceo">
-<div>
-<div class="eyebrow">CAPWIND SRL</div>
-<h2 data-t="ceoTitle">Meet Our CEO</h2>
-<h3>Walid Labidi</h3>
-<p data-t="ceoText">Walid Labidi leads CAPWIND SRL with a commitment to professional technical services, reliable project support and strong client relationships.</p>
-<a class="btn" href="mailto:capwindsrl@gmail.com" data-t="contactCEO">Contact CAPWIND</a>
-</div>
-<img src="ceo-walid.png" alt="Walid Labidi — CEO CAPWIND SRL" loading="lazy">
-</div>
+<section id="leadership">
+  <div class="ceo">
+    <div>
+      <div class="eyebrow">LEADERSHIP</div>
+      <h2>Walid Labidi</h2>
+      <h3 data-i="ceoRole">Chief Executive Officer</h3>
+      <p class="intro" data-i="ceoText">
+        Walid Labidi leads CAPWIND SRL with a focus
+        on technical excellence, reliable service
+        and long-term professional relationships
+        in the wind energy industry.
+      </p>
+      <a class="btn" href="#contact" data-i="contactCeo">
+        Contact CAPWIND SRL
+      </a>
+    </div>
+    <img src="ceo-walid.png"
+      alt="Walid Labidi — CEO of CAPWIND SRL">
+  </div>
 </section>
 
-<section id="projects">
-<div class="container">
-<div class="eyebrow">CAPWIND SRL</div>
-<h2 data-t="projectsTitle">Our Project Gallery</h2>
-<p data-t="projectsText">Wind turbine equipment and technical work.</p>
-<div class="gallery">
-<img src="IMG-20261109-WA0019.jpg" alt="Wind turbine" loading="lazy">
-<img src="IMG-20261109-WA0023.jpg" alt="Wind turbine installation" loading="lazy">
-<img src="IMG-20261109-WA0024.jpg" alt="Wind energy equipment" loading="lazy">
-<img src="IMG-20261109-WA0027.jpg" alt="Technician at height" loading="lazy">
-<img src="IMG-20261109-WA0027 (1).jpg" alt="Wind turbine technician" loading="lazy">
-<img src="IMG-20261109-WA0013 (1).jpg" alt="Wind energy project" loading="lazy">
-</div>
-</div>
-</section>
-
-<section id="request" class="light">
-<div class="container">
-<div class="eyebrow">CAPWIND SRL</div>
-<h2 data-t="requestTitle">Request an Appointment or Service</h2>
-<p data-t="requestText">Tell us what you need. CAPWIND will review your request and contact you to arrange an appointment.</p>
-<form action="https://formsubmit.co/capwindsrl@gmail.com" method="POST">
-<input type="hidden" name="_subject" value="New CAPWIND Website Service Request">
-<input type="hidden" name="_captcha" value="true">
-<input type="hidden" name="_template" value="table">
-<div class="field"><label for="name" data-t="name">Full Name</label><input id="name" name="name" required></div>
-<div class="field"><label for="company" data-t="company">Company Name</label><input id="company" name="company"></div>
-<div class="field"><label for="email" data-t="email">Email Address</label><input id="email" type="email" name="email" required></div>
-<div class="field"><label for="phone" data-t="phone">Phone Number</label><input id="phone" type="tel" name="phone" required></div>
-<div class="field full"><label for="service" data-t="serviceLabel">Choose a Service</label><select id="service" name="service" required></select></div>
-<div class="field full"><label for="location" data-t="location">Project Location</label><input id="location" name="project_location"></div>
-<div class="field full"><label for="details" data-t="details">Describe Your Project</label><textarea id="details" name="project_details" required></textarea></div>
-<div class="full notice" data-t="notice">This request does not confirm an appointment. CAPWIND SRL will contact you to arrange a suitable date and time.</div>
-<div class="full"><button type="submit" class="btn" data-t="submit">Send Service Request</button></div>
-</form>
-</div>
+<section class="dark" id="projects">
+  <div class="eyebrow">WIND ENERGY</div>
+  <h2 data-i="projectsTitle">Our technical field</h2>
+  <p data-i="projectsText">
+    Wind energy technology and technical operations.
+  </p>
+  <div class="gallery">
+    <img src="project-4.jpg" alt="Wind energy">
+    <img src="project-5.jpg" alt="Turbine equipment">
+    <img src="project-6.jpg" alt="Technical operations">
+  </div>
 </section>
 
 <section id="contact">
-<div class="container">
-<h2 data-t="contactTitle">Contact CAPWIND SRL</h2>
-<p>Email: <a href="mailto:capwindsrl@gmail.com">capwindsrl@gmail.com</a></p>
-<p>Phone: <a href="tel:+32466331414">+32 466 33 14 14</a></p>
-<p>CEO: Walid Labidi</p>
-</div>
+  <h2 data-i="contactTitle">Contact & company information</h2>
+  <div class="contact">
+    <div>
+      <h3>CAPWIND SRL</h3>
+      <p data-i="office">Registered office</p>
+      <p>
+        Rue de France 72, Box 203<br>
+        4800 Verviers<br>
+        Belgium
+      </p>
+      <h3 data-i="legal">Legal information</h3>
+      <p>VAT / BCE: BE 1032.489.279</p>
+      <p>Walid Labidi — CEO</p>
+    </div>
+    <div>
+      <h3 data-i="touch">Get in touch</h3>
+      <p>
+        <a href="mailto:capwindsrl@gmail.com">
+          capwindsrl@gmail.com
+        </a>
+      </p>
+      <p>
+        <a href="tel:+32466331414">
+          +32 466 33 14 14
+        </a>
+      </p>
+      <a class="btn"
+         href="mailto:capwindsrl@gmail.com?subject=CAPWIND%20SRL%20Service%20Request"
+         data-i="emailBtn">
+        Send a service request
+      </a>
+    </div>
+  </div>
 </section>
 </main>
 
 <footer>
-<div class="container">
-<img class="logo" src="capwind-logo.png" alt="CAPWIND SRL logo">
-<p>WE POWER YOUR NEEDS</p>
-<p>© <span id="year"></span> CAPWIND SRL</p>
-</div>
+  <img src="capwind-logo-original.png"
+       alt="CAPWIND original logo">
+  <p>CAPWIND SRL · Belgium</p>
+  <p>© 2026 CAPWIND SRL. All rights reserved.</p>
 </footer>
 
 <script>
-const T={
+const translations = {
 en:{
-aboutNav:"About",servicesNav:"Services",projectsNav:"Projects",ceoNav:"CEO",requestNav:"Request Service",
-heroTitle:"Powering the Future of Wind Energy",heroText:"Professional technical services and dependable support for wind energy projects.",heroButton:"Request a Service",
-aboutTitle:"Your Partner in Wind Energy",aboutText:"CAPWIND SRL supports wind energy projects through technical maintenance, inspection, installation assistance and project support. We focus on professionalism, safety and dependable service.",
-servicesTitle:"Our Technical Services",
-s1:"Wind Turbine Maintenance",d1:"Maintenance and technical support for wind energy equipment.",
-s2:"Technical Inspections",d2:"Technical inspections and assessments.",
-s3:"Installation & Assembly",d3:"Assistance with turbine installation and assembly.",
-s4:"Project Support",d4:"Coordination and technical project assistance.",
-s5:"Technical Consultation",d5:"Advice and discussion of technical requirements.",
-s6:"Custom Requests",d6:"Contact us for other wind energy technical needs.",
-ceoTitle:"Meet Our CEO",ceoText:"Walid Labidi leads CAPWIND SRL with a commitment to professional technical services, reliable project support and strong client relationships.",contactCEO:"Contact CAPWIND",
-projectsTitle:"Our Project Gallery",projectsText:"Wind turbine equipment and technical work.",
-requestTitle:"Request an Appointment or Service",requestText:"Tell us what you need. CAPWIND will review your request and contact you to arrange an appointment.",
-name:"Full Name",company:"Company Name",email:"Email Address",phone:"Phone Number",serviceLabel:"Choose a Service",location:"Project Location",details:"Describe Your Project",
-notice:"This request does not confirm an appointment. CAPWIND SRL will contact you to arrange a suitable date and time.",submit:"Send Service Request",contactTitle:"Contact CAPWIND SRL",
-options:["Select a service","Wind turbine maintenance","Technical inspection","Installation and assembly","Project support","Technical consultation","Request a quotation","Other service"]
+home:"Home",about:"About",services:"Services",
+leadership:"Leadership",projects:"Projects",contact:"Contact",
+heroTitle:"Engineering the future of wind energy.",
+heroText:"Professional wind turbine maintenance, repair and technical support with a focus on safety, precision and reliability.",
+cta:"Request a consultation",
+aboutTitle:"About our company",
+aboutText:"CAPWIND SRL is a Belgium-based technical services company focused on supporting the wind energy sector. We provide maintenance, repair, troubleshooting and operational technical assistance for wind energy projects. Our approach prioritizes professional service, safety and dependable communication.",
+servicesTitle:"Technical services",
+s1:"Wind turbine maintenance",
+d1:"Technical inspection, preventive maintenance and ongoing turbine support.",
+s2:"Repairs and troubleshooting",
+d2:"Identifying technical problems and supporting efficient repair operations.",
+s3:"Technical support",
+d3:"Practical technical assistance and coordination for wind energy projects.",
+ceoRole:"Chief Executive Officer",
+ceoText:"Walid Labidi leads CAPWIND SRL with a focus on technical excellence, reliable service and long-term professional relationships in the wind energy industry.",
+contactCeo:"Contact CAPWIND SRL",
+projectsTitle:"Our technical field",
+projectsText:"Wind energy technology and technical operations.",
+contactTitle:"Contact & company information",
+office:"Registered office",legal:"Legal information",
+touch:"Get in touch",emailBtn:"Send a service request"
 },
 fr:{
-aboutNav:"À propos",servicesNav:"Services",projectsNav:"Projets",ceoNav:"Direction",requestNav:"Demande de service",
-heroTitle:"Au service de l'avenir de l'énergie éolienne",heroText:"Des services techniques professionnels et un accompagnement fiable pour les projets éoliens.",heroButton:"Demander un service",
-aboutTitle:"Votre partenaire dans l'énergie éolienne",aboutText:"CAPWIND SRL accompagne les projets éoliens avec des services de maintenance, d'inspection, d'assistance à l'installation et de soutien technique. Notre priorité est la sécurité et la fiabilité.",
-servicesTitle:"Nos services techniques",
-s1:"Maintenance des éoliennes",d1:"Maintenance et assistance technique des équipements éoliens.",
-s2:"Inspections techniques",d2:"Inspections et évaluations techniques.",
-s3:"Installation et montage",d3:"Assistance à l'installation et au montage.",
-s4:"Assistance aux projets",d4:"Coordination et accompagnement technique.",
-s5:"Conseil technique",d5:"Conseils et échanges sur vos besoins techniques.",
-s6:"Demandes spécifiques",d6:"Contactez-nous pour vos autres besoins.",
-ceoTitle:"Notre dirigeant",ceoText:"Walid Labidi dirige CAPWIND SRL avec un engagement envers le professionnalisme, la fiabilité des services techniques et la qualité des relations clients.",contactCEO:"Contacter CAPWIND",
-projectsTitle:"Galerie de projets",projectsText:"Équipements éoliens et travaux techniques.",
-requestTitle:"Demander un rendez-vous ou un service",requestText:"Décrivez vos besoins. CAPWIND examinera votre demande et vous contactera pour fixer un rendez-vous.",
-name:"Nom complet",company:"Nom de l'entreprise",email:"Adresse e-mail",phone:"Téléphone",serviceLabel:"Choisissez un service",location:"Lieu du projet",details:"Décrivez votre projet",
-notice:"Cette demande ne confirme pas un rendez-vous. CAPWIND SRL vous contactera pour fixer une date et une heure.",submit:"Envoyer la demande",contactTitle:"Contacter CAPWIND SRL",
-options:["Choisissez un service","Maintenance des éoliennes","Inspection technique","Installation et montage","Assistance aux projets","Conseil technique","Demande de devis","Autre service"]
+home:"Accueil",about:"À propos",services:"Services",
+leadership:"Direction",projects:"Projets",contact:"Contact",
+heroTitle:"Construire l'avenir de l'énergie éolienne.",
+heroText:"Maintenance, réparation et assistance technique professionnelle pour les éoliennes, avec une priorité donnée à la sécurité, à la précision et à la fiabilité.",
+cta:"Demander une consultation",
+aboutTitle:"À propos de notre entreprise",
+aboutText:"CAPWIND SRL est une entreprise belge de services techniques spécialisée dans le secteur de l'énergie éolienne. Nous proposons la maintenance, la réparation, le diagnostic des pannes et l'assistance technique opérationnelle pour les projets éoliens.",
+servicesTitle:"Services techniques",
+s1:"Maintenance des éoliennes",
+d1:"Inspections techniques, maintenance préventive et suivi des éoliennes.",
+s2:"Réparations et dépannage",
+d2:"Identification des problèmes techniques et assistance aux opérations de réparation.",
+s3:"Assistance technique",
+d3:"Assistance pratique et coordination technique pour les projets éoliens.",
+ceoRole:"Directeur général",
+ceoText:"Walid Labidi dirige CAPWIND SRL en privilégiant l'excellence technique, la fiabilité des services et les relations professionnelles durables dans le secteur éolien.",
+contactCeo:"Contacter CAPWIND SRL",
+projectsTitle:"Notre domaine technique",
+projectsText:"Technologies éoliennes et opérations techniques.",
+contactTitle:"Contact et informations sur l'entreprise",
+office:"Siège social",legal:"Informations légales",
+touch:"Nous contacter",emailBtn:"Envoyer une demande de service"
 },
 de:{
-aboutNav:"Über uns",servicesNav:"Leistungen",projectsNav:"Projekte",ceoNav:"Geschäftsführung",requestNav:"Service anfragen",
-heroTitle:"Wir gestalten die Zukunft der Windenergie",heroText:"Professionelle technische Dienstleistungen und zuverlässige Unterstützung für Windenergieprojekte.",heroButton:"Service anfragen",
-aboutTitle:"Ihr Partner für Windenergie",aboutText:"CAPWIND SRL unterstützt Windenergieprojekte mit Wartung, Inspektionen, Montagehilfe und technischer Projektbetreuung. Sicherheit und Zuverlässigkeit stehen im Mittelpunkt.",
-servicesTitle:"Unsere technischen Leistungen",
-s1:"Wartung von Windkraftanlagen",d1:"Wartung und technische Unterstützung für Windenergieanlagen.",
-s2:"Technische Inspektionen",d2:"Technische Inspektionen und Bewertungen.",
-s3:"Installation und Montage",d3:"Unterstützung bei Installation und Montage.",
-s4:"Projektunterstützung",d4:"Koordination und technische Projektbetreuung.",
-s5:"Technische Beratung",d5:"Beratung zu technischen Anforderungen.",
-s6:"Individuelle Anfragen",d6:"Kontaktieren Sie uns für weitere technische Leistungen.",
-ceoTitle:"Unser Geschäftsführer",ceoText:"Walid Labidi leitet CAPWIND SRL mit dem Anspruch, professionelle technische Dienstleistungen, zuverlässige Projektunterstützung und starke Kundenbeziehungen zu bieten.",contactCEO:"CAPWIND kontaktieren",
-projectsTitle:"Unsere Projektgalerie",projectsText:"Windenergieanlagen und technische Arbeiten.",
-requestTitle:"Termin oder Dienstleistung anfragen",requestText:"Beschreiben Sie Ihre Anforderungen. CAPWIND prüft Ihre Anfrage und kontaktiert Sie zur Terminvereinbarung.",
-name:"Vollständiger Name",company:"Firmenname",email:"E-Mail-Adresse",phone:"Telefonnummer",serviceLabel:"Dienstleistung auswählen",location:"Projektstandort",details:"Beschreiben Sie Ihr Projekt",
-notice:"Diese Anfrage bestätigt keinen Termin. CAPWIND SRL kontaktiert Sie, um einen passenden Termin zu vereinbaren.",submit:"Serviceanfrage senden",contactTitle:"CAPWIND SRL kontaktieren",
-options:["Dienstleistung auswählen","Wartung von Windkraftanlagen","Technische Inspektion","Installation und Montage","Projektunterstützung","Technische Beratung","Angebot anfordern","Andere Dienstleistung"]
+home:"Startseite",about:"Über uns",services:"Leistungen",
+leadership:"Geschäftsführung",projects:"Projekte",contact:"Kontakt",
+heroTitle:"Wir gestalten die Zukunft der Windenergie.",
+heroText:"Professionelle Wartung, Reparatur und technische Unterstützung für Windkraftanlagen mit Schwerpunkt auf Sicherheit, Präzision und Zuverlässigkeit.",
+cta:"Beratung anfragen",
+aboutTitle:"Über unser Unternehmen",
+aboutText:"CAPWIND SRL ist ein belgisches Unternehmen für technische Dienstleistungen im Bereich Windenergie. Wir bieten Wartung, Reparatur, Fehlerdiagnose und technische Unterstützung für Windenergieprojekte.",
+servicesTitle:"Technische Dienstleistungen",
+s1:"Wartung von Windkraftanlagen",
+d1:"Technische Inspektionen, vorbeugende Wartung und laufende Betreuung.",
+s2:"Reparatur und Fehlerdiagnose",
+d2:"Erkennung technischer Probleme und Unterstützung bei Reparaturarbeiten.",
+s3:"Technische Unterstützung",
+d3:"Praktische technische Hilfe und Koordination für Windenergieprojekte.",
+ceoRole:"Geschäftsführer",
+ceoText:"Walid Labidi leitet CAPWIND SRL mit einem Fokus auf technische Qualität, zuverlässigen Service und langfristige Geschäftsbeziehungen in der Windenergiebranche.",
+contactCeo:"CAPWIND SRL kontaktieren",
+projectsTitle:"Unser technisches Fachgebiet",
+projectsText:"Windenergietechnologie und technische Betriebsabläufe.",
+contactTitle:"Kontakt und Unternehmensinformationen",
+office:"Firmensitz",legal:"Rechtliche Informationen",
+touch:"Kontakt aufnehmen",emailBtn:"Serviceanfrage senden"
 },
 nl:{
-aboutNav:"Over ons",servicesNav:"Diensten",projectsNav:"Projecten",ceoNav:"Directie",requestNav:"Dienst aanvragen",
-heroTitle:"Samen bouwen aan de toekomst van windenergie",heroText:"Professionele technische diensten en betrouwbare ondersteuning voor windenergieprojecten.",heroButton:"Dienst aanvragen",
-aboutTitle:"Uw partner in windenergie",aboutText:"CAPWIND SRL ondersteunt windenergieprojecten met onderhoud, inspecties, installatiehulp en technische projectbegeleiding. Veiligheid en betrouwbaarheid staan centraal.",
-servicesTitle:"Onze technische diensten",
-s1:"Onderhoud van windturbines",d1:"Onderhoud en technische ondersteuning van windenergieapparatuur.",
-s2:"Technische inspecties",d2:"Technische inspecties en beoordelingen.",
-s3:"Installatie en montage",d3:"Ondersteuning bij installatie en montage.",
-s4:"Projectondersteuning",d4:"Coördinatie en technische projectbegeleiding.",
-s5:"Technisch advies",d5:"Advies over technische vereisten.",
-s6:"Speciale aanvragen",d6:"Neem contact op voor andere technische diensten.",
-ceoTitle:"Onze zaakvoerder",ceoText:"Walid Labidi leidt CAPWIND SRL met aandacht voor professionele technische dienstverlening, betrouwbare projectondersteuning en sterke klantrelaties.",contactCEO:"Contacteer CAPWIND",
-projectsTitle:"Onze projectgalerij",projectsText:"Windturbines en technische werkzaamheden.",
-requestTitle:"Afspraak of dienst aanvragen",requestText:"Beschrijf uw wensen. CAPWIND beoordeelt uw aanvraag en neemt contact op om een afspraak te maken.",
-name:"Volledige naam",company:"Bedrijfsnaam",email:"E-mailadres",phone:"Telefoonnummer",serviceLabel:"Kies een dienst",location:"Projectlocatie",details:"Beschrijf uw project",
-notice:"Deze aanvraag bevestigt geen afspraak. CAPWIND SRL neemt contact met u op om een geschikte datum en tijd af te spreken.",submit:"Aanvraag versturen",contactTitle:"Contacteer CAPWIND SRL",
-options:["Kies een dienst","Onderhoud van windturbines","Technische inspectie","Installatie en montage","Projectondersteuning","Technisch advies","Offerte aanvragen","Andere dienst"]
+home:"Home",about:"Over ons",services:"Diensten",
+leadership:"Directie",projects:"Projecten",contact:"Contact",
+heroTitle:"Wij bouwen aan de toekomst van windenergie.",
+heroText:"Professioneel onderhoud, reparaties en technische ondersteuning voor windturbines, met aandacht voor veiligheid, precisie en betrouwbaarheid.",
+cta:"Vraag een adviesgesprek aan",
+aboutTitle:"Over ons bedrijf",
+aboutText:"CAPWIND SRL is een Belgisch technisch dienstverleningsbedrijf dat zich richt op de windenergiesector. Wij bieden onderhoud, reparaties, storingsdiagnose en operationele technische ondersteuning voor windenergieprojecten.",
+servicesTitle:"Technische diensten",
+s1:"Onderhoud van windturbines",
+d1:"Technische inspecties, preventief onderhoud en doorlopende ondersteuning.",
+s2:"Reparaties en storingsdiagnose",
+d2:"Technische problemen opsporen en reparatiewerkzaamheden ondersteunen.",
+s3:"Technische ondersteuning",
+d3:"Praktische technische hulp en coördinatie voor windenergieprojecten.",
+ceoRole:"Algemeen directeur",
+ceoText:"Walid Labidi leidt CAPWIND SRL met aandacht voor technische kwaliteit, betrouwbare dienstverlening en duurzame professionele relaties in de windenergiesector.",
+contactCeo:"Contacteer CAPWIND SRL",
+projectsTitle:"Ons technische werkgebied",
+projectsText:"Windenergietechnologie en technische werkzaamheden.",
+contactTitle:"Contact en bedrijfsinformatie",
+office:"Maatschappelijke zetel",legal:"Wettelijke informatie",
+touch:"Neem contact op",emailBtn:"Stuur een serviceaanvraag"
 }
 };
 
-const language=document.getElementById("language");
-const service=document.getElementById("service");
-
 function setLanguage(lang){
-const t=T[lang]||T.en;
-document.documentElement.lang=lang;
-document.querySelectorAll("[data-t]").forEach(el=>{
-const key=el.getAttribute("data-t");
-if(t[key])el.textContent=t[key];
-});
-const previous=service.value;
-service.innerHTML="";
-t.options.forEach((label,index)=>{
-const option=document.createElement("option");
-option.value=index===0?"":String(index);
-option.textContent=label;
-service.appendChild(option);
-});
-service.value=previous;
-if(service.selectedIndex<0)service.selectedIndex=0;
-localStorage.setItem("capwind-language",lang);
+  const words=translations[lang] || translations.en;
+  document.documentElement.lang=lang;
+  document.querySelectorAll("[data-i]").forEach(el=>{
+    const key=el.getAttribute("data-i");
+    if(words[key]) el.textContent=words[key];
+  });
 }
-
-language.addEventListener("change",()=>setLanguage(language.value));
-const saved=localStorage.getItem("capwind-language");
-if(T[saved])language.value=saved;
-setLanguage(language.value);
-document.getElementById("year").textContent=new Date().getFullYear();
+document.getElementById("language")
+  .addEventListener("change",function(){
+    setLanguage(this.value);
+  });
+setLanguage("en");
 </script>
+
 </body>
 </html>
